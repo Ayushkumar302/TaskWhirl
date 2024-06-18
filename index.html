@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/TaskWhirl/style.css">
+    <title>TaskWhirl</title>
+</head>
+<body>
+  <!-- navbar -->
+    <nav id="navbar">
+        <div class="menu-icon">
+           <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+          TaskWhirl
+        </div>
+        <div class="nav-items" >
+           <li><a href="#welcomePage" id="home">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Blogs</a></li>
+           <li><a href="#">Contact</a></li>
+           <li><a href="#">Feedback</a></li>
+        </div>
+        <div class="search-icon">
+           <span class="fas fa-search" ></span>
+        </div>
+        <div class="cancel-icon"  >
+           <span class="fas fa-times"></span>
+        </div>
+        <form id="searchForm">
+           <input type="search" id="taskSearchInput" class="search-data" placeholder="Search your tasks . . ."  required>
+           <button type="submit" class="fas fa-search"></button>
+        </form>
+     </nav>
+
+<!-- first section -->
+        <section class="First-section" id="welcomePage">
+            <div class="top">
+                <div class="top-img">
+                  <img
+                    src="assets/undraw_task_list_6x9d.svg"
+                    alt=""/>
+                </div>
+
+                <div class="top-content">
+                    <div id="content-first">"Get Organized with TaskWhirl - Your  <br>Ultimate  Task Manager."</div>
+                    <div id="content-second">
+                      "Welcome to TaskWhirl - the ultimate task manager <br> for busy individuals and teams. <br>Stay organized, collaborate seamlessly, and boost <br>productivity with our intuitive tools. <br> Join TaskWhirl today and conquer your <br> to-do list effortlessly!"
+                    </div>
+                   <div>
+                    <a href="#secondSection" class="topBtn">Get Started</a>
+                   </div>
+                  </div>
+              </div>
+
+        </section>
+
+        <!-- second section -->
+        <section class="Second-section" id="secondSection">
+         <div class="Task-container">
+            <div class="Task-container-Inner">
+               <!-- <img id="task-image" src="/assets/undraw_add_notes_re_ln36.svg" alt=""> -->
+                <h1 class="Task-title">Ready to Create Your New Task?</h1>
+            </div>
+             <button class="add-button" onclick="openModal()">+ Create</button>
+                <div class="task-list" id="task-list">
+                    <!-- Todo cards will be dynamically added here -->
+                </div>
+        </div>
+
+     </section>
+
+     <div class="modal" id="addTaskModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Title and Description</h2>
+            <input type="text" id="taskTitle" placeholder="Add Title . . .">
+            <textarea style="resize: vertical;" id="taskDescription" placeholder="Add Description . . ."></textarea>
+            <button id="actionButton" onclick="addTask()">Add</button>
+        </div>
+    </div>
+
+    <div class="scroll-to-top" id="scrollToTop">
+      <button onclick="scrollToTop()">&#8593;</button>
+  </div>
+
+
+   <!-- footer -->
+   
+   <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <p>We are a team dedicated to helping you manage your tasks efficiently.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: info@example.com</p>
+          <p>Phone: +91 9992384723</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+      </div>
+    </footer>
+    
+
+    
+    <script src="/TaskWhirl/script.js"></script>
+</body>
+</html>
